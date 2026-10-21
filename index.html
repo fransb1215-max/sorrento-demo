@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorrento · Pescados & Mariscos · Puerto Madero</title>
+  <meta name="description" content="Sorrento Restaurant. Más de 50 años de cocina mediterránea en Puerto Madero: pescados, mariscos, pastas y carnes.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="img/isotipo-red.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Red+Hat+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <img src="img/isotipo-red.svg" alt="" class="loader__logo">
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+      <div class="loader__meta">
+        <span>Puerto Madero</span>
+        <span id="loaderCount">00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel"></span></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <a href="#top" class="header__logo" aria-label="Sorrento, inicio">
+      <img src="img/logo-home.svg" alt="Sorrento">
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#historia" class="nav__link" data-magnetic>Historia</a>
+      <a href="#carta" class="nav__link" data-magnetic>Carta</a>
+      <a href="#ambientes" class="nav__link" data-magnetic>Ambientes</a>
+      <a href="#eventos" class="nav__link" data-magnetic>Eventos</a>
+      <a href="#contacto" class="nav__link" data-magnetic>Contacto</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang" role="group" aria-label="Idioma de la carta">
+        <a href="https://www.sorrentorestaurante.com.ar/carta/carta-esp/" class="is-active">ES</a>
+        <a href="https://www.sorrentorestaurante.com.ar/carta/carta-por/">PT</a>
+        <a href="https://www.sorrentorestaurante.com.ar/carta/carta-english/">EN</a>
+      </div>
+      <a href="#reservas" class="btn btn--red btn--sm" data-magnetic>Reservar</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav>
+      <a href="#historia"><small>01</small>Historia</a>
+      <a href="#carta"><small>02</small>Carta</a>
+      <a href="#ambientes"><small>03</small>Ambientes</a>
+      <a href="#eventos"><small>04</small>Eventos</a>
+      <a href="#reservas"><small>05</small>Reservas</a>
+      <a href="#contacto"><small>06</small>Contacto</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <a href="tel:+5491151990681">+54 9 11 5199-0681</a>
+      <span>Av. Alicia Moreau de Justo 410</span>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__media">
+        <img src="img/cover.jpg" alt="Pescado fresco sobre hielo" class="hero__img" id="heroImg">
+        <div class="hero__shade"></div>
+      </div>
+      <canvas class="hero__water" id="heroWater" aria-hidden="true"></canvas>
+
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow" data-hero><span class="dot"></span> Puerto Madero · Desde hace más de 50 años</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="word" data-hero>Del mar</span></span>
+          <span class="line"><span class="word word--italic" data-hero>a tu mesa</span><span class="hero__title-accent" data-hero>.</span></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__lead" data-hero>Cocina mediterránea de pescados, mariscos, pastas y carnes. Cuidamos nuestros ingredientes desde su <strong>origen</strong> hasta su <strong>destino</strong>.</p>
+          <div class="hero__ctas" data-hero>
+            <a href="#reservas" class="btn btn--red" data-magnetic>Reservar mesa <i class="arrow"></i></a>
+            <a href="#carta" class="btn btn--ghost" data-magnetic>Ver la carta</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__side" data-hero>
+        <span>Pescados</span><i></i><span>Mariscos</span><i></i><span>Pastas</span>
+      </div>
+
+      <a href="#historia" class="hero__scroll" aria-label="Bajar">
+        <span class="hero__scroll-line"></span>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marquee">
+        <span>Pescados</span><img src="img/isotipo-red.svg" alt=""><span class="o">Mariscos</span><img src="img/isotipo-red.svg" alt="">
+        <span>Pastas frescas</span><img src="img/isotipo-red.svg" alt=""><span class="o">Carnes</span><img src="img/isotipo-red.svg" alt="">
+        <span>Arroces</span><img src="img/isotipo-red.svg" alt=""><span class="o">Puerto Madero</span><img src="img/isotipo-red.svg" alt="">
+      </div>
+    </div>
+
+    <!-- ============ HISTORIA ============ -->
+    <section class="about section" id="historia">
+      <div class="container about__grid">
+        <div class="about__text">
+          <p class="eyebrow" data-reveal><span class="num">01</span> Nuestra historia</p>
+          <h2 class="h2" data-split>Medio siglo frente al <em>dique</em>, con la misma obsesión: el producto.</h2>
+          <p class="body" data-reveal>Hace más de 50 años que Sorrento brinda un servicio gastronómico de primer nivel. Nuestra cocina mediterránea recorre el mar —pescados y mariscos de estación— y la tradición italiana de las pastas frescas artesanales, sin olvidar las carnes.</p>
+          <blockquote class="quote" data-reveal>
+            “Cuidar nuestros ingredientes desde su <span>origen</span>, hasta su <span>destino</span>.”
+          </blockquote>
+
+          <div class="stats">
+            <div class="stat" data-reveal>
+              <span class="stat__n"><span data-count="50">0</span>+</span>
+              <span class="stat__l">años de historia</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__n"><span data-count="2">0</span></span>
+              <span class="stat__l">ambientes: salón y galería</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__n"><span data-count="3">0</span></span>
+              <span class="stat__l">idiomas en nuestra carta</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__media">
+          <figure class="about__fig about__fig--a" data-parallax="-0.12">
+            <div class="img-reveal"><img src="img/about_one.jpg" alt="Fachada de Sorrento en Puerto Madero"></div>
+          </figure>
+          <figure class="about__fig about__fig--b" data-parallax="0.12">
+            <div class="img-reveal"><img src="img/about_two.jpg" alt="Mesa puesta en la galería de Sorrento"></div>
+          </figure>
+          <div class="about__badge" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+              <text><textPath href="#circ">SORRENTO · PESCE E PASTA · PUERTO MADERO · </textPath></text>
+            </svg>
+            <img src="img/isotipo-red.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CARTA ============ -->
+    <section class="menu section" id="carta">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal><span class="num">02</span> La carta</p>
+          <h2 class="h2" data-split>Especialistas en <em>pescados</em> &amp; mariscos.</h2>
+        </div>
+
+        <div class="menu__layout">
+          <div class="menu__main">
+            <div class="tabs" role="tablist" id="menuTabs">
+              <span class="tabs__ink" id="tabsInk"></span>
+            </div>
+            <div class="menu__list" id="menuList" role="tabpanel"></div>
+            <div class="menu__note">
+              <span>Servicio de mesa $5.000</span>
+              <span>Opciones sin T.A.C.C. y vegetarianas</span>
+              <span>Valet parking · 2 hs de estacionamiento sin cargo</span>
+            </div>
+          </div>
+
+          <aside class="tasting" data-reveal>
+            <div class="tasting__head">
+              <p class="eyebrow eyebrow--light">Menú</p>
+              <h3>3 tiempos</h3>
+              <p>Entrada, principal, postre y café o té, con vino incluido.</p>
+            </div>
+            <ol class="tasting__steps">
+              <li><b>Entradas</b>Gambas al ajillo · Buñuelos de espinaca con salsa romesco · Ensalada caprese</li>
+              <li><b>Principal</b>Salmón grillado con mil hojas de vegetales · Lomo con puré trufado y portobellos · Ravioles de espinaca</li>
+              <li><b>Postres</b>Tiramisú · Crema catalana · Crema helada con crumble</li>
+            </ol>
+            <div class="tasting__wines">
+              <div><span>Con vino Álamos</span><b>$62.000</b></div>
+              <div><span>Con vino Nicasia</span><b>$68.000</b></div>
+              <div><span>Con vino Saint Felicien</span><b>$73.000</b></div>
+            </div>
+            <a href="https://www.sorrentorestaurante.com.ar/wp-content/uploads/2026/10/2026-10-10-Menu-ESP-V1.0.pdf" target="_blank" rel="noopener" class="btn btn--light btn--block" data-magnetic>Carta completa (PDF) <i class="arrow"></i></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AMBIENTES (horizontal) ============ -->
+    <section class="gallery" id="ambientes">
+      <div class="gallery__pin" id="galleryPin">
+        <div class="gallery__intro">
+          <p class="eyebrow eyebrow--light"><span class="num">03</span> Ambientes</p>
+          <h2 class="h2 h2--light">Una mesa <em>sobre el agua</em>.</h2>
+          <p class="body body--light">Elegí entre nuestro salón o la galería vidriada con vista a los veleros del dique de Puerto Madero.</p>
+          <div class="gallery__progress"><span id="galleryProgress"></span></div>
+        </div>
+        <div class="gallery__track" id="galleryTrack">
+          <figure class="g-card g-card--wide" data-cursor="Ver">
+            <img src="img/slider-contacto-2.jpg" alt="Mesa con vista a los veleros del dique">
+            <figcaption><span>01</span> Vista al dique</figcaption>
+          </figure>
+          <figure class="g-card" data-cursor="Ver">
+            <img src="img/blog-2.jpg" alt="Galería vidriada de Sorrento">
+            <figcaption><span>02</span> La galería</figcaption>
+          </figure>
+          <figure class="g-card g-card--tall" data-cursor="Ver">
+            <img src="img/sorrento_restaurant_about_one.jpg" alt="Frente del restaurante">
+            <figcaption><span>03</span> La terraza</figcaption>
+          </figure>
+          <figure class="g-card" data-cursor="Ver">
+            <img src="img/menu-3-pasos.jpg" alt="Salón en blanco y negro">
+            <figcaption><span>04</span> El salón</figcaption>
+          </figure>
+          <figure class="g-card" data-cursor="Ver">
+            <img src="img/blog-1.jpg" alt="Mesa junto al ventanal">
+            <figcaption><span>05</span> Junto al ventanal</figcaption>
+          </figure>
+          <figure class="g-card g-card--wide" data-cursor="Ver">
+            <img src="img/slider-contacto.jpg" alt="Salón con ventanales al dique">
+            <figcaption><span>06</span> Luz natural</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTOS ============ -->
+    <section class="events section" id="eventos">
+      <div class="container events__grid">
+        <div class="events__media" data-cursor="Eventos">
+          <div class="img-reveal"><img src="img/blog-2.jpg" alt="Salón preparado para un evento" data-parallax-img></div>
+        </div>
+        <div class="events__text">
+          <p class="eyebrow" data-reveal><span class="num">04</span> Eventos</p>
+          <h2 class="h2" data-split>Tu evento, con el <em>puerto</em> de fondo.</h2>
+          <p class="body" data-reveal>Alquilamos nuestros salones para eventos corporativos y celebraciones. Armamos el menú a medida y nos ocupamos de cada detalle para que vos solo disfrutes.</p>
+          <ul class="checks" data-reveal>
+            <li>Eventos corporativos y empresariales</li>
+            <li>Cumpleaños, aniversarios y celebraciones</li>
+            <li>Menú de eventos personalizado</li>
+            <li>Valet parking para tus invitados</li>
+          </ul>
+          <div class="events__ctas" data-reveal>
+            <a href="https://www.sorrentorestaurante.com.ar/contacto/" class="btn btn--dark" data-magnetic>Consultar evento <i class="arrow"></i></a>
+            <a href="https://wa.me/5491121713357?text=Hola%20Sorrento!%20Quiero%20consultar%20por%20un%20evento." target="_blank" rel="noopener" class="link-u">Escribinos por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESERVAS ============ -->
+    <section class="booking section" id="reservas">
+      <div class="booking__bg"><img src="img/slider-contacto-2.jpg" alt=""></div>
+      <div class="container booking__grid">
+        <div class="booking__text">
+          <p class="eyebrow eyebrow--light"><span class="num">05</span> Reservas</p>
+          <h2 class="h2 h2--light" data-split>Reservá tu <em>mesa</em>.</h2>
+          <p class="body body--light">Elegí fecha, horario y ambiente. Te confirmamos al instante por WhatsApp.</p>
+
+          <div class="summary" id="summary" aria-live="polite">
+            <div class="summary__row"><span>Personas</span><b data-sum="guests">2</b></div>
+            <div class="summary__row"><span>Fecha</span><b data-sum="date">—</b></div>
+            <div class="summary__row"><span>Horario</span><b data-sum="time">—</b></div>
+            <div class="summary__row"><span>Ambiente</span><b data-sum="area">Salón</b></div>
+          </div>
+
+          <p class="booking__alt">¿Preferís otra vía? <a href="https://www.apparta.co/sorrento/reservas" target="_blank" rel="noopener">Reservá en Apparta</a> o llamanos al <a href="tel:+541143198731">4319-8731</a>.</p>
+        </div>
+
+        <form class="widget" id="bookingForm" novalidate>
+          <div class="widget__steps" aria-hidden="true">
+            <span class="is-active">1</span><i></i><span>2</span><i></i><span>3</span>
+          </div>
+
+          <!-- Paso 1 -->
+          <fieldset class="step is-active" data-step="1">
+            <legend>¿Cuántos van a ser?</legend>
+            <div class="chips" id="guestChips"></div>
+
+            <legend class="mt">¿Qué ambiente preferís?</legend>
+            <div class="areas">
+              <label class="area">
+                <input type="radio" name="area" value="Salón" checked>
+                <span class="area__card"><img src="img/menu-3-pasos.jpg" alt=""><b>Salón</b><small>Clásico y cálido</small></span>
+              </label>
+              <label class="area">
+                <input type="radio" name="area" value="Galería">
+                <span class="area__card"><img src="img/blog-2.jpg" alt=""><b>Galería</b><small>Vista al dique</small></span>
+              </label>
+            </div>
+            <button type="button" class="btn btn--red btn--block" data-next>Continuar <i class="arrow"></i></button>
+          </fieldset>
+
+          <!-- Paso 2 -->
+          <fieldset class="step" data-step="2">
+            <legend>Elegí el día</legend>
+            <div class="cal" id="calendar">
+              <div class="cal__head">
+                <button type="button" class="cal__nav" data-cal="-1" aria-label="Mes anterior">‹</button>
+                <span class="cal__title" id="calTitle"></span>
+                <button type="button" class="cal__nav" data-cal="1" aria-label="Mes siguiente">›</button>
+              </div>
+              <div class="cal__dow"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+              <div class="cal__days" id="calDays"></div>
+            </div>
+
+            <legend class="mt">Horario</legend>
+            <div class="slots-tabs">
+              <button type="button" class="is-active" data-shift="lunch">Mediodía</button>
+              <button type="button" data-shift="dinner">Noche</button>
+            </div>
+            <div class="slots" id="slots"></div>
+
+            <div class="step__nav">
+              <button type="button" class="btn btn--ghost-dark" data-prev>Atrás</button>
+              <button type="button" class="btn btn--red" data-next>Continuar <i class="arrow"></i></button>
+            </div>
+          </fieldset>
+
+          <!-- Paso 3 -->
+          <fieldset class="step" data-step="3">
+            <legend>Tus datos</legend>
+            <div class="field">
+              <input type="text" id="fName" name="name" placeholder=" " required autocomplete="name">
+              <label for="fName">Nombre y apellido</label>
+            </div>
+            <div class="field">
+              <input type="tel" id="fPhone" name="phone" placeholder=" " required autocomplete="tel">
+              <label for="fPhone">Teléfono</label>
+            </div>
+            <div class="field">
+              <select id="fOccasion" name="occasion">
+                <option value="">Sin ocasión especial</option>
+                <option>Cumpleaños</option>
+                <option>Aniversario</option>
+                <option>Reunión de negocios</option>
+                <option>Otra celebración</option>
+              </select>
+              <label for="fOccasion" class="is-fixed">Ocasión</label>
+            </div>
+            <div class="field">
+              <textarea id="fNotes" name="notes" rows="2" placeholder=" "></textarea>
+              <label for="fNotes">Comentarios (alergias, sin T.A.C.C., silla de bebé…)</label>
+            </div>
+            <p class="form-error" id="formError" role="alert"></p>
+            <div class="step__nav">
+              <button type="button" class="btn btn--ghost-dark" data-prev>Atrás</button>
+              <button type="submit" class="btn btn--red">Confirmar por WhatsApp <i class="arrow"></i></button>
+            </div>
+          </fieldset>
+
+          <!-- Listo -->
+          <div class="step step--done" data-step="4">
+            <div class="done-mark"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-15"/></svg></div>
+            <h3>¡Listo!</h3>
+            <p>Abrimos WhatsApp con tu pedido de reserva. Te respondemos a la brevedad para confirmarla.</p>
+            <button type="button" class="btn btn--ghost-dark" id="restart">Hacer otra reserva</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contact section" id="contacto">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <p class="eyebrow" data-reveal><span class="num">06</span> Dónde estamos</p>
+          <h2 class="h2" data-split>Av. Alicia Moreau de Justo <em>410</em>.</h2>
+          <p class="body" data-reveal>Puerto Madero, Buenos Aires. Valet parking y 2 horas de estacionamiento sin cargo.</p>
+
+          <div class="contact__cards">
+            <a href="tel:+5491151990681" class="c-card" data-reveal>
+              <span class="c-card__k">Teléfono</span>
+              <span class="c-card__v">+54 9 11 5199-0681</span>
+              <span class="c-card__v">+54 9 11 5199-0682</span>
+            </a>
+            <a href="tel:+541143198731" class="c-card" data-reveal>
+              <span class="c-card__k">Línea fija</span>
+              <span class="c-card__v">(011) 4319-8731</span>
+            </a>
+            <a href="https://wa.me/5491121713357" target="_blank" rel="noopener" class="c-card" data-reveal>
+              <span class="c-card__k">WhatsApp</span>
+              <span class="c-card__v">+54 9 11 2171-3357</span>
+            </a>
+            <a href="mailto:info@sorrentomadero.ar" class="c-card" data-reveal>
+              <span class="c-card__k">Email</span>
+              <span class="c-card__v">info@sorrentomadero.ar</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact__map" data-reveal>
+          <iframe title="Mapa: Sorrento, Av. Alicia Moreau de Justo 410" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Sorrento%20Restaurant%2C%20Av.%20Alicia%20Moreau%20de%20Justo%20410%2C%20Buenos%20Aires&z=16&output=embed"></iframe>
+          <a class="contact__map-btn" href="https://www.google.com/maps/search/?api=1&query=Sorrento+Av.+Alicia+Moreau+de+Justo+410+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar <i class="arrow"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cta">
+        <h2>¿Te esperamos <em>esta noche</em>?</h2>
+        <a href="#reservas" class="btn btn--red" data-magnetic>Reservar mesa <i class="arrow"></i></a>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <img src="img/logo-home.svg" alt="Sorrento" class="footer__logo">
+          <p>Pescados &amp; Mariscos · Cocina mediterránea en Puerto Madero hace más de 50 años.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <a href="#historia">Historia</a><a href="#carta">Carta</a><a href="#ambientes">Ambientes</a><a href="#eventos">Eventos</a><a href="#reservas">Reservas</a>
+        </div>
+        <div>
+          <h4>Carta</h4>
+          <a href="https://www.sorrentorestaurante.com.ar/carta/carta-esp/">Español</a>
+          <a href="https://www.sorrentorestaurante.com.ar/carta/carta-por/">Português</a>
+          <a href="https://www.sorrentorestaurante.com.ar/carta/carta-english/">English</a>
+        </div>
+        <div>
+          <h4>Seguinos</h4>
+          <a href="https://www.instagram.com/sorrentopesceypasta" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/SorrentoBsAs/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Sorrento Restaurant</span>
+        <a href="#top" class="to-top">Volver arriba ↑</a>
+      </div>
+    </div>
+    <div class="footer__giant" aria-hidden="true">SORRENTO</div>
+  </footer>
+
+  <a href="https://wa.me/5491121713357" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
